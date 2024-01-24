@@ -2,7 +2,11 @@
 ![LICENSE](https://img.shields.io/badge/license-MIT-green)
 
 data processing for Teleseismic P-wave Coda Autocorrelation
+made by Tianyu Cui and Jinju Zhou, January 24, 2024
 
+If you intent to use a part or entire code in your research, please cite at least one of the following articles:
+Zhou, J., & Zhang, W. (2021). Extracting reliable P-wave reflections from teleseismic P wave coda autocorrelation. Journal of Geophysical Research: Solid Earth, 126, e2021JB022064. https://doi.org/10.1029/2021JB022064
+Zhou, J., Hu, N., Hu, Y., & Zhang, W. (2022). Feasibility of estimating parameters and enhancing reflections of dipping Moho from teleseismic P wave coda autocorrelation. Journal of Geophysical Research: Solid Earth, 127, e2021JB023688. https://doi.org/10.1029/2021JB023688
 
 ## features:
 1. spectral whitening and autocorrelation for teleseismic P-wave coda wave 
