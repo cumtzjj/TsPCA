@@ -21,8 +21,8 @@ def station_center_map(stname, min_SNR, stla, stlo, evla, evlo, figure_folder='f
     # map distance range 30, 60 and 90 degree
     for style in ["E-60d", "E-120d", "E-180d"]:
         fig.plot(x=stlo, y=stla, style=style, pen="0.8p,red" )
-    fig.plot(x=evlo, y=evla, style="a0.25c", color="red", pen="black")
-    fig.plot(x=stlo, y=stla, style="t0.3c", color="black", pen="black")
+    fig.plot(x=evlo, y=evla, style="a0.25c", fill="red", pen="black")
+    fig.plot(x=stlo, y=stla, style="t0.3c", fill="black", pen="black")
     # text 30, 60 and 90 degree
     for y,text in zip([14, -16, -46], ["30", "60", "90"]):
         fig.text(x=stlo, y=y, text=text, offset="0c/0.1c")
