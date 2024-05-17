@@ -17,7 +17,9 @@ Zhou, J., Hu, N., Hu, Y., & Zhang, W. (2022). Feasibility of estimating paramete
 
 
 ## dependencies
-obspy, signal, numpy, pandas, matplotlib, pygmt
+obspy, scipy, numpy, matplotlib, pygmt
+
+test well: python3.9.15, obspy1.4.1, pygmt0.10.0, matplotlib3.8.4
 ***
 
 ## parameters setting

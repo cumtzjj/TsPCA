@@ -164,7 +164,6 @@ if __name__ == '__main__':
         tr = read(fname, format='SAC')[0]
         tr.detrend('linear')
         tr.resample(40)
-        
         auto = compute_auto(tr, freq_width)
         auto_stream.append(auto)
     stack = data_stack(auto_stream, order)

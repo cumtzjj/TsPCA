@@ -45,17 +45,24 @@ def SNR_calculate(data, ref_time, signal_win=[-5, 5], noise_win=[-20, 0]):
     return snr
 
 
-"""
+'''
 return predicted phase arrival time 
-"""
+'''
 def predicted_phase_arrival(event_depth, distance, phase_list, ref_model="ak135"):
     model = TauPyModel(model=ref_model)
     arrival_phase = {}
     arrivals = model.get_travel_times(source_depth_in_km=event_depth, distance_in_degree=distance, phase_list=phase_list)
-    for i in range(len(arrivals)):
-        phase_name = arrivals[i].name
-        phase_arrival = arrivals[i].time
-        arrival_phase[phase_name] = phase_arrival
+    for index, arrival in enumerate(arrivals):
+        phase_name = arrival.name
+        # choose the first arrival time of P arrival
+        if phase_name == "P" and index == 0:
+            phase_arrival = arrival.time
+            arrival_phase[phase_name] = phase_arrival
+        elif phase_name == "P" and index != 0:
+            continue
+        else:
+            phase_arrival = arrival.time
+            arrival_phase[phase_name] = phase_arrival
     return arrival_phase
 
 
